@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <meta content="A Personal Projects website created by Daniel Epstein" name="description">
+  <meta content="Daniel Epstein" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../styles.css" rel="stylesheet">
+  <link href="../projectinfo.css" rel="stylesheet">
+
+  <script>
+    function toggleNav(){
+      var x = document.getElementById('nav-dropdown');
+      var b = document.getElementById('navtoggle');
+        $("#nav-dropdown").slideToggle();
+        b.classList.toggle("bi-list");
+        b.classList.toggle("bi-x");
+    }
+  </script>
+
+  <title>Projects - Custom Shell</title>
+  <link href="../img/logo.png" rel="icon">
+</head>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle" onclick="toggleNav()" id="navtoggle"></i>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex">
+
+        <div class="profile">
+            <a href="../index.html"><img src="../img/profile.png" alt="" class="img-fluid rounded-circle"></a>
+            <a href="../index.html"><img src="../img/logo_long_white.png" alt="" class="sticky-image d-flex"></a>
+            <h1 class="text-light"><a href="../index.html">Daniel Epstein</a></h1>
+            <div class="social-links mt-2 text-center">
+                <a href="https://github.com/mdepstein0" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-github"></i></a>
+                <a href="mailto:mdepstein0@gmail.com" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-epstein-cs" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-folder2-open"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav>
+        
+        <aside id="nav-dropdown" class="nav-menu" style="display: none;">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </aside>
+        <!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+    <section class="projectinfo">
+        <img src="../img/shell_banner.png" class="featured-image" style="object-position: 0% 0%;"/>
+        <h1>Custom Shell</h1>
+        
+        <h2>Technologies Used</h2>
+        <div class="tech-used">
+            <div class="tech-item">
+                <img src="../img/technologies/c.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/bash.png"/>
+            </div>
+        </div>
+
+        <h2>Summary</h2>
+        <div class="info-text">
+            &emsp;&emsp; In my Systems Programming class at Drexel University, we had a series of assignments where we
+            built parts of a custom shell. Essentially, a shell is just a program that continuously takes input and runs commands.
+            So that was all that the shell could do at first, by utilizing the C language's <b>execv</b> and chdir functions.
+            Then, input and output redirection using &gt;, &lt;, and &gt;&gt; was added, and then pipes using | shortly after.
+            I also added color to give my shell a little bit of personality, and I plan on adding color to the "ls" output in order to
+            easily distinguish between directories and different file types.<br/><br/>
+
+            Unfortunately, I am not able to post the source code here because this was done for a class, and I can't have any
+            other Drexel students copying my work. However, interested parties can make a request for the source code by using
+            the contact form at the bottom of the home page found <a href="../index.html#contact">here</a>.<br/><br/>
+            
+        </div>
+        <div class="blog-controls">
+            <a href="../index.html#Projects"><span class="arrow"></span> Back to Home</a>
+        </div>
+    </article>
+
+</body>
+
+
+</html>

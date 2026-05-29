@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Daniel Epstein - Home</title>
+<link href="img/newlogo.png" rel="icon">
+<link rel="stylesheet" href="test_styles.css">
+</head>
+<body>
+    <div class="body">
+      
+      <div id="resume-popup" class="popup">
+        <div id="resume-popup-header" class="popup-header">Daniel_Epstein_Resume_Final(2).pdf 
+          <div class="window-controls">
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-window-minimize"></i></span>
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-window-maximize"></i></span>
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-close"></i></span>
+          </div>
+        </div>
+        <embed src="DanielEpsteinResume.pdf#toolbar=0" width="820" height="555">
+      </div>
+
+      <div id="contact-popup" class="popup" onclick="bringToFront()">
+        <div id="contact-popup-header" class="popup-header">Contact
+          <div class="window-controls">
+            <span onclick="hidePopup('contact-popup')"><i class="fa fa-window-minimize"></i></span>
+            <span onclick="hidePopup('contact-popup')"><i class="fa fa-window-maximize"></i></span>
+            <span onclick="hidePopup('contact-popup')"><i class="fa fa-close"></i></span>
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="first">
+              <span class="first-letter">F</span>irst Name:
+            </label>
+            <input id="first" name="first" type="text"/>
+          </div>
+
+          <div class="form-group">
+            <label for="last">
+              <span class="first-letter">L</span>ast Name:
+            </label>
+            <input id="last" name="last" type="text"/>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <span class="first-letter">E</span>mail:
+            </label>
+            <input id="email" name="email" type="email"/>
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <span class="first-letter">M</span>essage:
+            </label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+
+          <button> OK </button>
+        </form>
+      </div>
+
+      <div id="projects-popup" class="popup" onclick="bringToFront()">
+        <div id="projects-popup-header" class="popup-header">Local Disk (C:)
+          <div class="window-controls">
+            <span onclick="hidePopup('projects-popup')"><i class="fa fa-window-minimize"></i></span>
+            <span onclick="hidePopup('projects-popup')"><i class="fa fa-window-maximize"></i></span>
+            <span onclick="hidePopup('projects-popup')"><i class="fa fa-close"></i></span>
+          </div>
+        </div>
+        <div class="popup-body">
+          <div id="menuBar" class="bar">
+            <a><span class="first-letter">F</span>ile</a>
+            <a><span class="first-letter">E</span>dit</a>
+            <a><span class="first-letter">V</span>iew</a>
+            <a><span class="first-letter">F</span>avorites</a>
+            <a><span class="first-letter">T</span>ools</a>
+            <a><span class="first-letter">H</span>elp</a>
+          </div>
+          <div id="menuBarLogo">
+            <img src="img/newlogo.png"/>
+          </div>
+          <div id="navBar" class="bar">
+            <img src="img/back_icon.png"/>
+            <select onmousedown="(function(e){ e.preventDefault(); })(event, this)">
+              <option>Back</option>
+            </select>
+            <img src="img/back_icon.png" style="transform: rotate(180deg); opacity: 0.5;"/>
+            <select onmousedown="(function(e){ e.preventDefault(); })(event, this)" style="opacity: 0.5;">
+              <option></option>
+            </select>
+            <img src="icons/ICON/922.ico"/> 
+          </div>
+          <div id="search" class="bar">
+            <img src="icons/ICON/190.ico"/>
+            Search
+          </div>
+          <div id="folders">
+            <img src="icons/ICON/20.ico"/>
+            Folders
+          </div>
+          <div id="idek" class="bar">
+            <img src="icons/ICON/659.ico"/>
+          </div>
+          <div id="address" class="bar">
+            <span>Address</span>
+            <div id="address_input_container">
+              <input id="address_input" type="text" value="C:\"/>
+            </div>
+          </div>
+          <div id="folders-select">
+            <div class="bar fs-header" style="width: calc(100% - 20px); border-right: 5px solid #f1eee5;"> Folders </div>
+            <div id="folders-list-container">
+              <ul>
+                <li><img src="icons/ICON/34.ico"/> My Documents</li>
+                <li><img src="icons/ICON/117.ico"/> My Computer</li>
+                <ul>
+                  <li><img src="icons/ICON/49.ico"/> 3.5 Floppy (A:)</li>
+                  <li id="blog_select" ondblclick="blog_files();"><img src="icons/ICON/91.ico"/> Removable Disk (B:)</li>
+                  <li id="project_select" ondblclick="projects_files();"><img src="icons/ICON/64.ico"/> Local Disk (C:)</li>
+                  <ul>
+                    <li class="no-subfolder" ondblclick="kanoodle_files();"><img src="icons/ICON/34.ico" /> Kanoodle Solver</li>
+                    <li class="no-subfolder"><img src="icons/ICON/34.ico" /> Custom Shell</li>
+                    <li class="no-subfolder"><img src="icons/ICON/34.ico" /> Liftoff Planner</li>
+                    <li class="no-subfolder"><img src="icons/ICON/34.ico" /> Star Wars Game</li>
+                    <li class="no-subfolder"><img src="icons/ICON/34.ico" /> Arc Reactor Model(1)</li>
+                    <li class="no-subfolder"><img src="icons/ICON/34.ico" /> Jupyter Notebook</li>
+                  </ul>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <div id="folders-content">
+            <div class="bar fs-header" style="width: calc(40% - 22px)"> Name </div>
+            <div class="bar fs-header" style="justify-content: end"> Size </div>
+            <div class="bar fs-header"> Type </div>
+            <div class="bar fs-header"> Date Modified </div>
+          </div>
+          <div id="file-footer">
+
+          </div>
+        </div>
+      </div>
+
+      <div id="notepad-popup" class="popup">
+        <div id="notepad-popup-header" class="popup-header"> Untitled - Notepad
+          <div class="window-controls">
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-window-minimize"></i></span>
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-window-maximize"></i></span>
+            <span onclick="hidePopup('resume-popup')"><i class="fa fa-close"></i></span>
+          </div>
+        </div>
+        <div id="menuBar" class="bar" style="width: 100%">
+          <a><span class="first-letter">F</span>ile</a>
+          <a><span class="first-letter">E</span>dit</a>
+          <a><span class="first-letter">V</span>iew</a>
+          <a><span class="first-letter">F</span>avorites</a>
+          <a><span class="first-letter">T</span>ools</a>
+          <a><span class="first-letter">H</span>elp</a>
+        </div>
+        <article id="file-text">
+
+        </article>
+      </div>
+
+      <section id="home">
+      </section>  
+      <footer>
+        <div class="menu"><img src="img/newlogo.png"/>start</div><div id="time"></div>
+      </footer>    
+    </div>
+
+<script>
+
+    function kanoodle_files() {
+      console.log("KANOODLE")
+      document.getElementById("folders-content").innerHTML =
+      `<div class="bar fs-header" style="width: calc(40% - 22px)"> Name </div>
+        <div class="bar fs-header" style="justify-content: end"> Size </div>
+        <div class="bar fs-header"> Type </div>
+        <div class="bar fs-header"> Date Modified </div>
+        <div class="file-column" id="column-name" style="width: calc(40% - 2px); background-color: #f1f3f5;">  
+            <span class="file-item"> <img src="icons/ICON/34.ico"/> .dist </span>
+            <span class="file-item"> <img src="icons/ICON/34.ico"/> __pycache__ </span>
+            <span class="file-item"> <img src="icons/python.png"/> board.py </span>
+            <span class="file-item"> <img src="icons/python.png"/> main.py </span>
+            <span class="file-item"> <img src="icons/python.png"/> menu.py </span>
+            <span class="file-item"> <img src="icons/python.png"/> piece.py </span>
+            <span class="file-item"> <img src="icons/ICON/403.ico"/> README.txt </span>
+          </div>
+          <div class="file-column" id="column-size"> 
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item"> 6 KB </span>
+            <span class="file-item"> 5 KB </span>
+            <span class="file-item"> 12 KB </span>
+            <span class="file-item"> 2 KB </span>
+            <span class="file-item"> 1 KB </span>
+          </div>
+          <div class="file-column" id="column-type">
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> Python Source File </span>
+            <span class="file-item"> Python Source File </span>
+            <span class="file-item"> Python Source File </span>
+            <span class="file-item"> Python Source File </span>
+            <span class="file-item"> Text Document </span>
+          </div>
+          <div class="file-column" id="column-date"> 
+            <span class="file-item"> 05/25/2024 5:50 PM </span>
+            <span class="file-item"> 07/06/2024 2:40 PM </span>
+            <span class="file-item"> 09/15/2023 8:11 PM </span>
+            <span class="file-item"> 01/03/2024 8:33 PM </span>
+            <span class="file-item"> 09/15/2023 10:16 AM </span>
+            <span class="file-item"> 08/24/2023 8:31 PM </span>
+            <span class="file-item"> 11/06/2023 8:50 PM </span>
+          </div>`
+    }
+
+    function projects_files() {
+      console.log("PROJECTS")
+      document.getElementById("folders-content").innerHTML =
+      `<div class="bar fs-header" style="width: calc(40% - 22px)"> Name </div>
+        <div class="bar fs-header" style="justify-content: end"> Size </div>
+        <div class="bar fs-header"> Type </div>
+        <div class="bar fs-header"> Date Modified </div>
+        <div class="file-column" id="column-name" style="width: calc(40% - 2px); background-color: #f1f3f5;"> 
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Kanoodle Solver </span> 
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Custom Shell </span>
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Liftoff Planner </span>
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Star Wars Game </span>
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Arc Reactor Model(1) </span>
+            <span class="file-item"> <img src="icons/ICON/34.ico" /> Jupyter Notebook </span>
+          </div>
+          <div class="file-column" id="column-size"> 
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+          </div>
+          <div class="file-column" id="column-type">
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+            <span class="file-item"> File Folder </span>
+          </div>
+          <div class="file-column" id="column-date"> 
+            <span class="file-item"> 05/25/2024 5:50 PM </span>
+            <span class="file-item"> 07/06/2024 2:40 PM </span>
+            <span class="file-item"> 09/15/2023 8:11 PM </span>
+            <span class="file-item"> 01/03/2024 8:33 PM </span>
+            <span class="file-item"> 09/15/2023 10:16 AM </span>
+            <span class="file-item"> 08/24/2023 8:31 PM </span>
+          </div>`
+    }
+
+    function blog_files() {
+      console.log("BLOG")
+      document.getElementById("folders-content").innerHTML =
+      `<div class="bar fs-header" style="width: calc(40% - 22px)"> Name </div>
+        <div class="bar fs-header" style="justify-content: end"> Size </div>
+        <div class="bar fs-header"> Type </div>
+        <div class="bar fs-header"> Date Modified </div>
+        <div class="file-column" id="column-name" style="width: calc(40% - 2px); background-color: #f1f3f5;">
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> majorana_one.txt </span> 
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> cci_engineering_merger.txt </span> 
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> crowdstrike_oops.txt </span>
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> drexel_cybersecurity.txt </span>
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> my_time_at_lyquix.txt </span>
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> accessibility.txt </span>
+            <span class="file-item" onclick="showPopup(\'notepad-popup\', \'majorana_one.txt\')"> <img src="icons/notepad.png" /> tech_communication.txt </span>
+          </div>
+          <div class="file-column" id="column-size"> 
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+            <span class="file-item">  </span>
+          </div>
+          <div class="file-column" id="column-type">
+            <span class="file-item"> Text Document </span>
+            <span class="file-item"> Text Document </span>
+            <span class="file-item"> Text Document </span>
+            <span class="file-item"> Text Document </span>
+            <span class="file-item"> Text Document </span>
+            <span class="file-item"> Text Document </span>
+          </div>
+          <div class="file-column" id="column-date"> 
+            <span class="file-item"> 05/25/2024 5:50 PM </span>
+            <span class="file-item"> 07/06/2024 2:40 PM </span>
+            <span class="file-item"> 09/15/2023 8:11 PM </span>
+            <span class="file-item"> 01/03/2024 8:33 PM </span>
+            <span class="file-item"> 09/15/2023 10:16 AM </span>
+            <span class="file-item"> 08/24/2023 8:31 PM </span>
+          </div>`
+    }
+    
+    function bringToFront(id) {
+      var elements  = document.getElementsByTagName("*"),
+      maxZIndex = 0;
+
+      for( var i=0; i < elements.length; i++ ) {
+          var zIndex = parseInt(elements[i].style.zIndex) || 0;
+          maxZIndex  = zIndex > maxZIndex ? zIndex : maxZIndex;
+      }
+      var i = this.id || id;
+      if(i){
+        document.getElementById(i).style.zIndex = maxZIndex+1;
+      }
+    }
+
+    var elements = document.getElementsByClassName("popup");
+
+    let clickTimeout;
+
+    // Get all li elements
+    function allLIsClick(){
+      const listItems = document.querySelectorAll('li');
+
+      // Add the click event listener to each li
+      listItems.forEach(function(li) {
+          li.addEventListener('click', function (e) {handleClick(e)});
+          li.addEventListener('dblclick', function (e) {handleDoubleClick(e)});
+      });
+    }
+
+    // Function to handle the click event
+    function handleDoubleClick(event) {
+      var elems = document.getElementsByClassName("selected");
+      for(var i = 0; i < elems.length; i++){
+        elems[i].classList.remove('selected');
+      }
+      if(event.detail > 1){
+        document.getElementById(event.srcElement.id).classList.add("selected");
+      }
+        }
+
+    function handleClick(event) {
+        if(event.detail == 1){
+          console.log("CLICK");
+        }
+        }
+
+    allLIsClick();
+
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('mousedown', bringToFront, false);
+    }
+
+    function allowDrop(event) {
+        event.preventDefault(); // Allow drop
+    }
+
+    function drag(event) {
+        var draggedElement = event.target.closest('.draggableLink');
+        event.dataTransfer.setData("text", draggedElement.id); // Set the dragged element's ID
+    }
+
+    function drop(event) {
+        event.preventDefault(); // Prevent default drop behavior
+        var data = event.dataTransfer.getData("text"); // Get the dragged element's ID
+        var draggedElement = document.getElementById(data); // Find the dragged element by its ID
+        
+        // Check if draggedElement exists
+        if (!draggedElement) {
+            console.error("Dragged element with ID '" + data + "' not found in document.");
+            return;
+        }
+        
+        // Append the dragged element to the drop zone
+        event.target.appendChild(draggedElement);
+    }
+
+    function hideStart(){
+        // document.getElementById('start').style.display = 'None';
+        let home = document.getElementById("home");
+        home.innerHTML = '';
+        // <div id="div1" class="dropSpot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        let columns = 10;
+        let rows = 6;
+
+        for(var i = 0; i < rows * columns; i++){
+            let elem = document.createElement("div")
+            elem.setAttribute('id', 'div'+i);
+            elem.setAttribute('class', 'dropSpot');
+            elem.setAttribute('ondrop', 'drop(event)');
+            elem.setAttribute('ondragover', 'allowDrop(event)');
+            home.appendChild(elem);
+        }
+
+        document.getElementById("div0").innerHTML = '<a class="draggableLink" id="link-about" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/1009.ico"/> About Me </a>';
+        document.getElementById("div"+columns).innerHTML = '<a onclick="showPopup(\'resume-popup\', \'resume\')" class="draggableLink" id="link-resume" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/12.ico"/> Resume </a>';
+        document.getElementById("div"+(columns+1)).innerHTML = '<a target="_blank" href="https://github.com/mdepstein0" class="draggableLink" id="link-github" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/930.ico"/> Github </a>';
+        document.getElementById("div"+columns*2).innerHTML = '<a onclick="showPopup(\'projects-popup\', \'projects\')" class="draggableLink" id="link-projects" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/19.ico"/> Projects </a>';
+        document.getElementById("div"+(columns*2+1)).innerHTML = '<a target="_blank" href="https://www.linkedin.com/in/daniel-epstein-cs" class="draggableLink" id="link-linkedin" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/1481.ico"/> LinkedIn </a>';
+        document.getElementById("div"+columns*3).innerHTML = '<a onclick="showPopup(\'projects-popup\', \'blog\')" class="draggableLink" id="link-blog" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/1221.ico"/> Blog </a>';
+        document.getElementById("div"+columns*4).innerHTML = '<a onclick="showPopup(\'contact-popup\', \'contact\')" class="draggableLink" id="link-contact" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/129.ico"/> Contact </a>';
+        document.getElementById("div"+(columns*3+1)).innerHTML = '<a target="_blank" href="https://www.thetriangle.org/author/depstein/" class="draggableLink" id="link-triangle" draggable="true" ondragstart="drag(event)"><img src="icons/ICON/312.ico"/> The Triangle </a>';
+
+        // var footer = document.createElement("footer");
+        // footer.innerHTML = '<div class="menu"><img src="img/newlogo.png"/>start</div><div id="time"></div>';
+        // home.appendChild(footer);
+
+        let a;
+        let time;
+        a = new Date();
+
+        let h = a.getHours() % 12;
+        h = h < 10 ? "0" + h : h;
+        
+        let m = a.getMinutes();
+        m = m < 10 ? "0" + m : m;
+
+        let q = a.getHours() > 11 ? "PM" : "AM";
+
+        let s = a.getSeconds();
+        s = s < 10 ? "0" + s : s;
+
+        time = h + ':' + m + ":" + s + " " + q;
+        document.getElementById('time').innerHTML = time;
+
+        setInterval(() => {
+          a = new Date();
+
+          let h = a.getHours() % 12;
+          h = h < 10 ? "0" + h : h;
+          h = h == "00" ? "12" : h;
+          
+          let m = a.getMinutes();
+          m = m < 10 ? "0" + m : m;
+
+          let q = a.getHours() > 11 ? "PM" : "AM";
+
+          let s = a.getSeconds();
+          s = s < 10 ? "0" + s : s;
+
+          time = h + ':' + m + ":" + s + " " + q;
+          document.getElementById('time').innerHTML = time;
+        }, 1000);
+    }
+    // setTimeout(window.addEventListener, 100, 'keypress', hideStart, false) //4000
+    hideStart()
+
+    function showPopup(id, type){
+      var elems = document.getElementsByClassName("selected");
+      if(type == "projects"){
+        projects_files();
+        for(var i = 0; i < elems.length; i++){
+          elems[i].classList.remove('selected');
+        }
+        document.getElementById("project_select").classList.add("selected");
+      }
+      else if(type == "blog") {
+        blog_files();
+        for(var i = 0; i < elems.length; i++){
+          elems[i].classList.remove('selected');
+        }
+        document.getElementById("blog_select").classList.add("selected");
+      }
+      var left = Math.floor(Math.random() * 501) + 250;
+      var top = Math.floor(Math.random() * 151) + 5;
+      let r = document.getElementById(id);
+      r.style.top = top + "px";
+      r.style.left = left + "px";
+      r.style.display = 'block';
+      bringToFront(id);
+    }
+
+    function hidePopup(id){
+      let r = document.getElementById(id);
+      r.style.display = 'none';
+    }
+
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("resume-popup"));
+    dragElement(document.getElementById("contact-popup"));
+    dragElement(document.getElementById("projects-popup"));
+    dragElement(document.getElementById("notepad-popup"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        // e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+
+</script>
+</body>
+</html>

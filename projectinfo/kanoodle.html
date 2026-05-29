@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <meta content="A Personal Projects website created by Daniel Epstein" name="description">
+  <meta content="Daniel Epstein" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../styles.css" rel="stylesheet">
+  <link href="../projectinfo.css" rel="stylesheet">
+
+  <script>
+    function toggleNav(){
+      var x = document.getElementById('nav-dropdown');
+      var b = document.getElementById('navtoggle');
+        $("#nav-dropdown").slideToggle();
+        b.classList.toggle("bi-list");
+        b.classList.toggle("bi-x");
+    }
+  </script>
+
+  <title>Projects - Kanoodle Solver</title>
+  <link href="../img/logo.png" rel="icon">
+</head>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle" onclick="toggleNav()" id="navtoggle"></i>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex">
+
+        <div class="profile">
+            <a href="../index.html"><img src="../img/profile.png" alt="" class="img-fluid rounded-circle"></a>
+            <a href="../index.html"><img src="../img/logo_long_white.png" alt="" class="sticky-image d-flex"></a>
+            <h1 class="text-light"><a href="../index.html">Daniel Epstein</a></h1>
+            <div class="social-links mt-2 text-center">
+                <a href="https://github.com/mdepstein0" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-github"></i></a>
+                <a href="mailto:mdepstein0@gmail.com" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-epstein-cs" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-folder2-open"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav>
+        
+        <aside id="nav-dropdown" class="nav-menu" style="display: none;">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </aside>
+        <!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+    <section class="projectinfo">
+        <div class="featured-image" style="background-image: url('../img/kanoodle.png'); background-size: 150px; background-color: black"></div>
+        <h1>Kanoodle Solver</h1>
+        
+        <h2>Technologies Used</h2>
+        <div class="tech-used">
+            <div class="tech-item">
+                <img src="../img/technologies/python.png"/>
+            </div>
+        </div>
+
+        <h2>Summary</h2>
+        <div class="info-text">
+            &emsp;&emsp;Kanoodle is a brain-teasing puzzle game created by Educational Insights, that involves placing 12 unique "noodles" or puzzle pieces
+            onto a 5 by 11 grid. In the summer of 2023, Kanoodle rapidly became a hit with teenagers because of social media, with people playing the game
+            slightly different than the original creators intended. This new method involved picking somewhere between 1-3 pieces, putting them in the kanoodle 
+            case, shaking it p, and trying to fill in the remaining slots with the remaining pieces. <br/><br/>
+            <img src="../img/kanoodle-solved.jpg" class="center-img"/><br/><br/>
+            While most of these configurations are solvable, some are not and often it is difficult to find a solution or determine if a solution is even possible.
+            After watching my girlfriend fall in love with the game, I decided this was a problem I could fix. I wrote a script that displays a user interface
+            to allow the user to input the setup of the game, and then it runs an exhaustive algorithm to find any and all solutions.<br/><br/>
+            <img src="../img/kanoodle-menu.png" class="tall-img"/>
+            <img src="../img/kanoodle-output.png" class="tall-img"/><br/><br/>
+            
+            Here is a brief look at that algorithm:<br/>
+
+<pre>
+    <code>
+    def tryPlace(pieces, opens):
+
+        # Next piece to place is the first piece in pieces
+        p = pieces[0]
+
+        # For each orientation
+        for j in range(p.flips):
+            for i in range(p.rots):
+
+                # Copy the opens to a local copy for the current piece
+                pc = opens.copy()
+                for c in pc:
+
+                    # For each open spot, 
+                    # 1 - move to the open spot,
+                    # 2 - if that is a valid placement, place the piece, then tryPlace next piece
+                    # 3 - remove the piece and try next spot
+
+                    # Move to open and check placement
+                    p.moveToOpen(c)
+                    if(board.isValidPlacement(p)):
+                        board.placePiece(p)
+                        #If there are more pieces to place, place the next piece
+                        if(len(pieces) > 1):
+                            # Copy the open spaces minus the spaces being taken up by the current piece
+                            temp = opens.copy()
+                            for t in p.shape:
+                                temp.remove(t)
+                            # Place the next piece
+                            tryPlace(pieces[1:], temp)
+                        else:
+                            # Placed the last piece! Print the board
+                            print(board)
+
+                        # There aren't anymore solutions with this current placement, remove piece and try next                
+                        board.removePiece(p)
+
+                # Rotate the piece to try that solution
+                p.rotate90()
+            # Flip the piece to try that solution
+            p.flip()
+    </code>
+</pre>
+        </div>
+        <div class="blog-controls">
+            <a href="../index.html#Projects"><span class="arrow"></span> Back to Home</a>
+            <a href="https://github.com/mdepstein0/kanoodle" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i> Source Code </a>
+            <a href="https://github.com/mdepstein0/kanoodle" class="button">Go to Project</a>
+        </div>
+    </article>
+
+</body>
+
+
+</html>

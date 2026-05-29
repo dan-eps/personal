@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <meta content="A Personal Projects website created by Daniel Epstein" name="description">
+  <meta content="Daniel Epstein" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+
+  <script>
+    function toggleNav(){
+      var x = document.getElementById('nav-dropdown');
+      var b = document.getElementById('navtoggle');
+        $("#nav-dropdown").slideToggle();
+        b.classList.toggle("bi-list");
+        b.classList.toggle("bi-x");
+    }
+  </script>
+
+
+  <title>Daniel Epstein - Home</title>
+  <link href="img/logo.png" rel="icon">
+</head>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle" onclick="toggleNav()" id="navtoggle"></i>
+
+<body onload="typeWriter()">
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex">
+
+      <div class="profile">
+        <a href="index.html"><img src="img/profile.png" alt="" class="img-fluid rounded-circle"></a>
+        <a href="index.html"><img src="img/logo_long_white.png" alt="" class="sticky-image d-flex"></a>
+        <h1 class="text-light"><a href="index.html">Daniel Epstein</a></h1>
+        <div class="social-links mt-2 text-center">
+          <a href="https://github.com/mdepstein0" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-github"></i></a>
+          <a href="mailto:mdepstein0@gmail.com" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/daniel-epstein-cs" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+          <li><a href="index.html#Projects" class="nav-link scrollto"><i class="bi bi-folder2-open"></i> <span>Projects</span></a></li>
+          <li><a href="index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+      
+      <aside id="nav-dropdown" class="nav-menu" style="display: none;">
+        <ul>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+          <li><a href="index.html#Projects" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Projects</span></a></li>
+          <li><a href="index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </aside>
+      <!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Daniel Epstein</h1>
+      <p>I'm a <span id="typing"></span></p>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Me</h2>
+        </div>
+        <div class="about-row">
+          <div class="about-text section-bg">
+              <p>Hi! I am an undergraduate Computer Science major in my third year at Drexel University. I am also 
+              pursuing a minor in Electrical Engineering. I am highly motivated and I have good problem solving and 
+              critical thinking skills. I am very good at math and programming, and I tutor in Math, Physics, and 
+              Computer Science. I am proficient in Python, Java, JavaScript, PHP, HTML and CSS. Also, I was the 
+              President of my High School's Robotics club, where I designed, built, and programmed VEX robots, as 
+              well as led my teams through numerous competitions at the regional and state level.</p>
+              <p>In my free time I love hiking and exploring the outdoors, reading fun facts about math and science,
+              playing video games on my Nintendo Switch, and watching television, mostly superhero shows and cartoons.
+              I love learning new things, and am always working on projects or building something new. Some of my 
+              favorite projects include my model arc reactor and my 3D-printed human-sized Lego lightsaber hilt.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p> Here are some languages I feel proficient in from high school and college classes, 
+          work experience, and personal projects. I have so much more let to learn in these languages,
+          but these bars indicate how comfortable I feel creating and mainting code in the following languages.
+          If you want to see some of the projects I've completed <i>using</i> these languages, 
+          <a href="index.html#Projects" class="scrollto">click here!</a>
+          </p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="skill-left" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">95%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:95%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">87%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:97%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">85%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:85%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"> PHP <i class="val">85%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:85%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">SQL <i class="val">75%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:65%"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="skill-right" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">97%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:97%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">TypeScript <i class="val">85%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:85%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Java <i class="val">85%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:85%"></div>
+              </div>
+            </div>
+
+
+            <div class="progress">
+              <span class="skill">C <i class="val">80%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:80%"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Racket <i class="val">70%</i></span>
+              <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:70%"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><a href="DanielEpsteinResume.pdf" style="color: #173b6c;" download data-toggle="tooltip" data-placement="top" title="Download Daniel's Resume">Resume <i class="bi bi-file-earmark-arrow-down-fill"></i></a></h2>
+        </div>
+
+        <div class="resume-container row">
+          <div class="resume-left" data-aos="fade-up">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Daniel Epstein</h4>
+              <ul>
+                <li>Phialdelphia, PA</li>
+                <li><a href="mailto:daniel.epstein@drexel.edu">daniel.epstein@drexel.edu</a></li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Science in Computer Science</h4>
+              <h5>2021 - Present</h5>
+              <p><em><b class="du-text">Drexel University</b>, Philadelphia, PA</em></p>
+              <p>Pursuing a minor in Electrical Engineering<br/>Cummulative GPA: 3.81<br/> Expected Graduation: June 2026</p>
+            </div>
+
+            <h3 class="resume-title">Relevant Coursework</h3>
+            <div class="resume-item">
+              <ul>
+                <li>Data Structures</li>
+                <li>Systems Programming</li>
+                <li>Programming Language Concepts</li>
+                <li>Advanced Programming Tools and Techniques</li>
+                <li>Mathematical Foundations of Computer Science</li>
+                <li>Algorithms and Analysis</li>
+                <li>Calculus I, II, III</li>
+                <li>Multivariate Calculus</li>
+                <li>Discrete Math</li>
+                <li>Electric Circuits </li>
+                <li>Fundamentals of Physics I, II, III</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Activities</h3>
+            <div class="resume-item">
+              <ul>
+                <li>IT Co-Director, <b>The Drexel Triangle</b>, 2023 to Present</li>
+                <li>Member, <b>Drexel Robotics Club</b>, 2021 to Present</li>
+                <li>Member, <b>Drexel American Society of Mechanical Engineers</b>, 2021 to Present</li>  
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Awards</h3>
+            <div class="resume-item">
+              <ul>
+                <li><b>Outstanding Undergraduate Award</b> 2024</li> 
+                <li><b>Drexel Dean's Scholarship</b> 2021</li>
+                <li><b>John Loughridge Award for Design and Innovation</b> 2021</li> 
+              </ul>
+            </div>
+
+          </div>
+      
+          <div class="resume-right" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <a href="https://sig.com/">
+              <div class="resume-item experience" data-company="SIG">
+                <h4>Energy Developer</h4>
+                <h5>September 2023 - PRESENT</h5>
+                <p><em><span class="company-name">Susquehenna International Group</span>, Bala Cynwyd, PA</em></p>
+                <ul>
+                  <li>Built a transfer system to move configurable automated data-scraping jobs between hosts and environments</li>
+                  <li>Monitored over 150 market data feeds to check for missing, stale, or incorrect data</li>
+                  <li>Conferred with traders to update existing scripts to better fit their trading strategies</li>
+                </ul>
+              </div>
+            </a>
+            <a href="https://drexel.edu/cci/student-experience/summer-programs/">
+              <div class="resume-item experience" data-company="Drexel">
+                <h4>Digital Development Senior Instructor</h4>
+                <h5>February 2024 - August 2024</h5>
+                <p><em><span class="company-name">Drexel University</span>, Philadelphia, PA </em></p>
+                <ul>
+                  <li>Developed interesting and exciting workshops to teach high school students  aspects of full stack development such as UI design and backend scripting</li>
+                  <li>Lead campers through the Agile design process to create full stack projects with a focus on food insecurity</li>
+                  <li>Reviewed applicant resumes and conducted interviews to hire additional camp instructors</li>
+                </ul>
+              </div>
+            </a>
+            <a href="blog/time-at-lyquix.html">
+              <div class="resume-item experience" data-company="Lyquix">
+                <h4>Website Developer</h4>
+                <h5>September 2022 - September 2023</h5>
+                <p><em><span class="company-name">Lyquix</span>, Philadelphia, PA </em></p>
+                <ul>
+                  <li>Built entire websites from scratch using PHP, Javascript, HTML and CSS with content management systems such as Wordpress and Joomla</li>
+                  <li>Conferred with development teams to prioritize needs, resolve conflicts, develop content criteria, and determine solutions.</li>
+                  <li>Updated the Lyquix Wordpress template to utilize Typescript and Vue capabilities</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="Projects" class="Projects section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Here are some of the projects I've completed to showcase my skills. I am always working on new projects and learning new things, but please explore some of the things I have already created! 
+          These projects may be incomplete, but I encourage you to check out the <a href="https://github.com/mdepstein0" target="_blank">source code.</a>
+          </p>
+        </div>
+
+        <div class="row Projects-container">
+          <a class="Projects-item" href="projectinfo/kanoodle.html">
+            <img src="img/kanoodle.png" alt="Daniel's Kanoodle Solver">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">Kanoodle Solver</h3>
+              <p>A python script that returns a solution for a given configuration of the game Kanoodle.</p>
+              <div class="techs">
+                <img src="img/technologies/python.png" class="tech-img"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="Projects-item" href="projectinfo/shell.html">
+            <img src="img/shell.png" alt="Custom Shell">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">Custom Shell</h3>
+              <p>A custom shell written in C for a systems programming class at Drexel University.</p>
+              <div class="techs">
+                <img src="img/technologies/c.png" class="tech-img"/>
+                <img src="img/technologies/bash.png" class="tech-img"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="Projects-item" href="projectinfo/liftoff.html">
+            <img src="img/liftoffbanner.png" alt="LIFTOFF Planner">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">LIFTOFF Planner</h3>
+              <p>An academic planner web application built over 6 months for a CS course at Drexel University.</p>
+              <div class="techs">
+                <img src="img/technologies/php.png" class="tech-img ti-long"/>
+                <img src="img/technologies/mysql.png" class="tech-img ti-long"/>
+                <img src="img/technologies/xampp.png" class="tech-img"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+          
+          <a class="Projects-item" href="projectinfo/starwarsgame.html">
+            <img src="img/starwarsbanner.png" alt="Star Wars Game">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">Star Wars Game</h3>
+              <p>A Star Wars themed game built using Javascript and HTML/CSS Canvas animation.</p>
+              <div class="techs">
+                <img src="img/technologies/js.png" class="tech-img"/>
+                <img src="img/technologies/html5.png" class="tech-img"/>
+                <img src="img/technologies/css3.png" class="tech-img"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="Projects-item" href="projectinfo/notebook.html">
+            <img src="img/notebookbanner.png" alt="Jupyter Notebook">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">Jupyter Notebook</h3>
+              <p>A Jupyter Book I created to store my notes online. This is a new book so pages may be missing.</p>
+              <div class="techs">
+                <img src="img/technologies/jupyterbook.png" class="tech-img"/>
+                <img src="img/technologies/markdown.png" class="tech-img ti-long"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+
+          <a class="Projects-item" href="arcreactor.pdf">
+            <img src="img/arcreactor.png" alt="Arc Reactor Model">
+            <div class="Projects-item-content">
+              <h3 class="fw-bold">Arc Reactor Model</h3>
+              <p>A replica model of the ARC-Reactor from Iron Man that I built for a Product Design class.</p>
+              <div class="techs">
+                <img src="img/technologies/onshape.jpg" class="tech-img"/>
+              </div>
+              <span class="read-more"> View Project 	<span class="arrow"></span></span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Blog</h2>
+          <p>Here are some articles and essays I've written. I'm always trying to learn new things about the world and share what I've learned.</p>
+        </div>
+
+        <div class="row blog-container" data-aos="fade-up" data-aos-delay="100">
+
+          <section class="splide" aria-label="Basic Structure Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    <a href="https://www.thetriangle.org/news/drexels-online-cybersecurity-degree-ranked-2-globally/">
+                    <div class="blog-article">
+                      <div class="featured-image">
+                        <img src="https://www.thetriangle.org/wp-content/uploads/2023/10/colstonIMG_76381-1536x1024.jpg" />
+                      </div>
+                      <div class="article-info">
+                        <h3>Drexel's Online Cybersecurity Degree Ranked #2 Globally</h3>
+                        <span>November 17, 2023</span>
+                        <p>
+                          Cybersecurity Guide ranked Drexel's online bachelor's in computing and security technology second in online cybersecurity degrees for 2024.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="blog/time-at-lyquix.html">
+                    <div class="blog-article">
+                      <div class="featured-image">
+                        <img src="img/lyquix.png" />
+                      </div>
+                      <div class="article-info">
+                        <h3>My Experience Working at Lyquix: My First Co-Op Experience</h3>
+                        <span>September 21, 2023</span>
+                        <p>
+                          Here's what I worked on and what I learned in my time working for my first co-op! 
+                          This experience shaped who I am as a professional developer.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="blog/web-accessibility.html">
+                    <div class="blog-article">
+                      <div class="featured-image">
+                        <img src="img/html.jpg" />
+                      </div>
+                      <div class="article-info">
+                        <h3>Accessibility in Web: Reccomendations for Web Dev</h3>
+                        <span>March 1, 2023</span>
+                        <p>
+                          As technologies improve, we have more oppurtunities than ever to create websites and 
+                          applications that are accessible to all people.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="blog/interview-with-ruben.html">
+                    <div class="blog-article">
+                      <div class="featured-image">
+                        <img src="img/interview.png" />
+                      </div>
+                      <div class="article-info">
+                        <h3>Tips for Technical Communication: An Expert Interview</h3>
+                        <span>February 23, 2023</span>
+                        <p>
+                          An expert interview about the best practices for technical communication with 
+                          clients and employees from the perspective of a small business owner.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Please feel free to contact me with any comments, questions, or project ideas. 
+          I am always looking for more work to learn and grow my skills and Projects! You can
+          also email me at <a href="mailto:daniel.epstein@drexel.edu">daniel.epstein@drexel.edu</a> </p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="contact-form d-flex align-items-stretch">
+            <form>
+              <div class="row">
+                <div class="form-group fg-half">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group fg-half">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer>
+        <img src="img/logo_long_black.png"/>
+      </footer>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide', {
+        pagination: false,
+      } );
+      splide.mount();
+    } );
+  </script>
+  <script>
+    
+    var i = 0;
+    var txt = 'Developer, Student, Engineer, Tutor'; 
+    var speed = 50; 
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("typing").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</body>
+
+
+</html>

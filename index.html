@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>Daniel Epstein</title>
+        <link href="img/newlogo.png" rel="icon">
+
+        <link rel="stylesheet" href="test_styles.css">
+        <script src="custom-elements/icon.js"></script>
+        <script src="custom-elements/icon-grid.js"></script>
+        <script src="custom-elements/popup.js"></script>
+        <script src="custom-elements/contact.js"></script>
+        <script src="custom-elements/resume.js"></script>
+        <script src="custom-elements/portfolio.js"></script>
+        <script src="custom-elements/comics.js"></script>
+        <script src="custom-elements/sticky.js"></script>
+        <script src="custom-elements/about.js"></script>
+        <script src="custom-elements/notepad.js"></script>
+        <script src="custom-elements/work.js"></script>
+        <script src="custom-elements/triangle.js"></script>
+        <script src="custom-elements/lit-lab.js"></script>
+    </head>
+    <body>
+        <main>
+            <custom-icon-grid rows="6" cols="10">
+                <custom-icon name="About Me" src="icons/ICON/1009.ico" slot="slot-0-0"></custom-icon>
+                <custom-icon name="Resume" src="icons/ICON/1336.ico" slot="slot-0-1"></custom-icon>
+                <custom-icon name="Blog" src="icons/ICON/509.ico" slot="slot-0-2"></custom-icon>
+                <custom-icon name="Portfolio" src="icons/ICON/23.ico" slot="slot-0-3"></custom-icon>
+                <custom-icon name="Contact" src="icons/ICON/129.ico" slot="slot-0-4"></custom-icon>
+
+                <custom-icon name="LinkedIn" src="icons/ICON/1481.ico"  slot="slot-1-0" href="https://www.linkedin.com/in/daniel-epstein-cs"></custom-icon>
+                <custom-icon name="Github" src="icons/ICON/316.ico"  slot="slot-1-1" href="https://github.com/dan-eps"></custom-icon>
+                <custom-icon name="Work Experience" src="icons/ICON/206.ico" slot="slot-1-2"></custom-icon>
+                
+                <custom-icon name="Star Wars Game" src="icons/game_c.ico"  slot="slot-2-0" href="https://dan-eps.github.io/star-wars-game/"></custom-icon>
+                <custom-icon name="Triangle" src="icons/ICON/542.ico"  slot="slot-2-1"></custom-icon>
+                <custom-icon name="Lit Lab" src="icons/ICON/842.ico"  slot="slot-2-2"></custom-icon>
+                <custom-icon name="ARC Reactor" src="icons/ICON/14.ico"  slot="slot-2-3" href="img/arcreactor.png"></custom-icon>
+
+                <custom-icon name="Comics" src="icons/ICON/1018.ico" slot="slot-3-0"></custom-icon>
+                <custom-icon name="Award" src="icons/ICON/622.ico"  slot="slot-3-1" href="img/award.jpg"></custom-icon>
+            </custom-icon-grid>
+            <contact-popup></contact-popup>
+            <resume-popup></resume-popup>
+            <portfolio-popup></portfolio-popup>
+            <comics-popup></comics-popup>
+            <sticky-popup></sticky-popup>
+            <aboutme-popup></aboutme-popup>
+            <notepad-popup></notepad-popup>
+            <work-experience-popup></work-experience-popup>
+            <triangle-popup></triangle-popup>
+            <lit-lab-popup></lit-lab-popup>
+            <!-- in index.html -->
+            <form name="contact" netlify hidden>
+            <div class="form-group">
+                <label for="first">
+                <span class="first-letter">F</span>irst Name:
+                </label>
+                <input id="first" name="first" type="text" required="required"/>
+            </div>
+
+            <div class="form-group">
+                <label for="last">
+                <span class="first-letter">L</span>ast Name:
+                </label>
+                <input id="last" name="last" type="text" required="required"/>
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                <span class="first-letter">E</span>mail:
+                </label>
+                <input id="email" name="email" type="email" required="required"/>
+            </div>
+
+            <div class="form-group">
+                <label for="message">
+                <span class="first-letter">M</span>essage:
+                </label>
+                <textarea id="message" name="message" required="required"></textarea>
+            </div>
+            </form>
+
+        </main> 
+        <footer>
+            <div class="menu" onclick="showPopup(null, 'about-me-popup', 'about-me')">
+                <img src="img/newlogo.png"/> start
+            </div>
+            <div class="footer-link" onclick="showPopup(null, 'resume-popup', 'resume')">
+                <img src="icons/ICON/1336.ico"/> <span> Resume </span>
+            </div>
+            <div class="footer-link" onclick="showPopup(null, 'portfolio-popup', 'portfolio')">
+                <img src="icons/ICON/23.ico"/> <span> Projects - My Portfolio </span>
+            </div>
+            <div class="footer-link" onclick="showPopup(null, 'contact-popup', 'contact')">
+                <img src="icons/ICON/129.ico"/> <span> Contact Daniel Eps... </span>
+            </div>
+            <div id="time"></div>
+        </footer>
+        
+        <script src="scripts/drag-and-drop.js"></script>
+        <script src="scripts/util.js"></script>
+        <script src="scripts/files.js"></script>
+        <script src="scripts/blog_texts.js"></script>
+    </body>
+</html>

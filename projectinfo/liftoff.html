@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <meta content="A Personal Projects website created by Daniel Epstein" name="description">
+  <meta content="Daniel Epstein" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../styles.css" rel="stylesheet">
+  <link href="../projectinfo.css" rel="stylesheet">
+
+  <script>
+    function toggleNav(){
+      var x = document.getElementById('nav-dropdown');
+      var b = document.getElementById('navtoggle');
+        $("#nav-dropdown").slideToggle();
+        b.classList.toggle("bi-list");
+        b.classList.toggle("bi-x");
+    }
+  </script>
+
+  <title>Projects - Liftoff Calendar</title>
+  <link href="../img/logo.png" rel="icon">
+</head>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle" onclick="toggleNav()" id="navtoggle"></i>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="d-flex">
+
+        <div class="profile">
+            <a href="../index.html"><img src="../img/profile.png" alt="" class="img-fluid rounded-circle"></a>
+            <a href="../index.html"><img src="../img/logo_long_white.png" alt="" class="sticky-image d-flex"></a>
+            <h1 class="text-light"><a href="../index.html">Daniel Epstein</a></h1>
+            <div class="social-links mt-2 text-center">
+                <a href="https://github.com/mdepstein0" target="_blank" rel="noopener noreferrer" class="twitter"><i class="bi bi-github"></i></a>
+                <a href="mailto:mdepstein0@gmail.com" target="_blank" rel="noopener noreferrer" class="instagram"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-epstein-cs" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-folder2-open"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav>
+        
+        <aside id="nav-dropdown" class="nav-menu" style="display: none;">
+            <ul>
+            <li><a href="../index.html#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+            <li><a href="../index.html#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+            <li><a href="../index.html#Projects" class="nav-link scrollto"><i class="bi bi-book"></i> <span>Projects</span></a></li>
+            <li><a href="../index.html#blog" class="nav-link scrollto"><i class="bi bi-book-half"></i> <span>Blog</span></a></li>
+            <li><a href="../index.html#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </aside>
+        <!-- .nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+    <section class="projectinfo">
+        <img src="../img/liftoffbanner.png" class="featured-image"/>
+        <h1>LIFTOFF Academic Planner</h1>
+
+        <h2>Technologies Used</h2>
+        <div class="tech-used">
+            <div class="tech-item">
+                <img src="../img/technologies/html5.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/css3.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/js.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/php.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/mysql.png"/>
+            </div>
+            <div class="tech-item">
+                <img src="../img/technologies/xampp.png"/>
+            </div>
+        </div>
+        
+        <h2>Summary</h2>
+        <div class="info-text">
+            &emsp;&emsp;The LIFTOFF Calendar was built over the course of 6 months, as part of Drexel University's Computing and Informatics courses. 
+            Our team had 20 weeks to build a project from scratch following the Agile methodology. During this time, we learned how to utilize 
+            languages such as HTML, CSS, JavaScript, PHP, and SQL, as well as libraries such as Bootstrap 5, AJAX, and JQuery to build a fully 
+            functional web application.<br/><br/>
+
+            Unfortunately, our budget for this project is $0, which means we couldn't pay for hosting. Because the site was built primarily with PHP,
+            we have been unable to find a trusted service to host our site for free. If you go to <a href="https://liftoffcalendar.netlify.app">our live site</a>,
+            you'll see a working home page and about page and that's it. I am currently working on converting the rest of our files to plain HTML, CSS, and JS
+            so that everyone can see the amazing work that was put in to this project.<br/><br/>
+
+            While you may not be able to see the whole site in action, here is something you can look at. This is a function I wrote in our calendar to create 
+            a monthly calendar given the month, year, and calendar name: <br/><br/>
+<pre>
+    <code>
+        // Function to Create the Month View Calendar
+        function createMonthCalendar(m, y, c){
+            // Store month and year
+            var curr_month = m;
+            var curr_year = y;
+            
+            // Calculate the number of days in the current month
+            var num_days = new Date(curr_year, curr_month, 0).getDate();
+            
+            // Calculate the day that the month starts on
+            var start_day = parseInt(new Date(curr_month + "/1/" + curr_year).getDay());
+            
+            // Calculate the number of boxes that should be created
+            var total_boxes = num_days+start_day-1;
+            while(total_boxes %7 != 0) total_boxes++;
+            
+            // Store todays information for different output
+            var td = [new Date().getDate(), new Date().getMonth()+1, new Date().getYear()+1900];
+            
+            // Start the New Calendar
+            $("tbody").append("<tr>");
+            
+                // Create the Calendar
+            for(var x = 1; x<= total_boxes; x++){
+                
+                // Format the Month as A String
+                mstr = ""+curr_month
+                if(curr_month<10) mstr = "0"+mstr;
+                
+                // Format the Day as A String
+                dstr = ""+(x-start_day);
+                if((x-start_day)<10) dstr = "0"+dstr;
+                
+                // Format the Full Date as A String
+                var tdstr = curr_year+"-"+mstr+"-"+dstr;
+                
+                // If this box is not an actual day in the month, it is there for aesthetics
+                if(x < start_day+1 || x > num_days+start_day) $("tbody").append("<td class=\"text-end cal_day border px-1 null_box\" data-date=\""+tdstr+"\"></td>");
+                
+                // If this box is an actual day in the month, and is TODAY, make it bold and blue
+                else if(x-start_day == td[0] && m == td[1] && y == td[2]) $("tbody").append("<td class=\"text-end cal_day border px-1 text-success fw-bold text-decoration-underline\" data-dotm=\""+(x-start_day)+"\" data-date=\""+tdstr+"\">"+(x-start_day)+"</td>");
+                
+                // This box is an actual day in the month but is not today
+                else  $("tbody").append("<td class=\"text-end cal_day border px-1\" data-dotm=\""+(x-start_day)+"\" data-date=\""+tdstr+"\">"+(x-start_day)+"</td>");
+                
+                // Week is over, move to the next week
+                if(x%7 ==0) $("tbody").append("</tr> <tr>");
+                
+                }
+            
+            // Get all the events for this month
+            var firstd = curr_year+"-"+curr_month+"-1";
+            var lastd = curr_year+"-"+curr_month+"-"+num_days;
+            getEvents(firstd, lastd, c);
+            
+        }
+    </code>
+</pre>
+        </div>
+        <div class="blog-controls">
+            <a href="../index.html#Projects"><span class="arrow"></span> Back to Home</a>
+            <a href="https://github.com/mdepstein0/liftoffcalendar" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i> Source Code </a>
+            <a href="https://liftoffcalendar.org" class="button">Go to Project</a>
+        </div>
+    </article>
+
+    <script>
+        var blog = document.getElementById("article-text");
+        var count = 1;
+        for (const child of blog.children) {
+            if(child.tagName == "P"){
+                child.style.order = count;
+                count++;
+            }
+        }
+    </script>
+</body>
+
+
+</html>
