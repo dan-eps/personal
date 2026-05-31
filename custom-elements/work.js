@@ -21,6 +21,7 @@ class WorkExperience extends Popup{
                 <img src="img/lyquix.png"/>
             </aside>
             <div id="media">
+              COMING SOON
             </div>
         </div>
       </div>`;
